@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Website content management tool</title>
+</head>
+<body>
+    <div class="about" style="margin-bottom: 50px;">
+        <h1>About</h1>
+        <textarea rows="5" cols="50" style="display: block;" class="about-text">type here</textarea>
+        <button type="button" class="about-but" style="margin-top: 10px;">update</button>
+    </div>
+    <div class="events">
+        <h1>Events</h1>
+        <input class="name">
+        <button class="add">add event</button>
+        <div>
+            <ul class="curr-events">
+
+            </ul>
+        </div>
+    </div>
+    <div class="services">
+        <h1>Services</h1>
+        <h4><i>I would suggest restricting to 5 for each category</i></h4>
+        <p>XR Companies</p>
+        <input class="xr-in">
+        <select>
+            <option>
+                xr
+            </option>
+        </select>
+        <button class="xr-but">Add</button>
+        <div>
+            <ul class="xr"></ul>
+        </div>
+    </div>
+    <div class="timeline">
+        <h1>Timeline</h1>
+        <label>Add Date</label>
+        <input class="time-date" type="date" style="display: block; margin:10px">
+        <label>Add Event</label>
+        <input class="time-event" type="text" style="display: block; margin:10px">
+        <button class="time-but">Add to timeline</button>
+        <div>
+            <ul class="time">
+
+            </ul>
+        </div>
+    </div>
+    <div class="testimonials">
+        <h1>Testimonials</h1>
+        <h4><i>3 will be displayed adding more would then be displayed periodically</i></h4>
+        <input class="author" placeholder="author">
+        <input class="test" placeholder="testimonial">
+        <button class="add-test">Add Testimonial</button>
+        <div>
+            <ul class="tests">
+
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="bundle.js"></script>
+</html>
