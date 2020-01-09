@@ -2,6 +2,7 @@ const express = require('express')
 const expressGraphQL = require('express-graphql')
 const schema = require('./schema.js')
 const cors = require('cors')
+const port = process.env.PORT || 4000;
 
 const app = express()
 
@@ -12,6 +13,6 @@ app.use('/graphql', expressGraphQL({
     graphiql:true
 }));
 
-app.listen(4000, () => {
+app.listen(port, () => {
     console.log("server is up")
 })

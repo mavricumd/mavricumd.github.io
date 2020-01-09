@@ -1,0 +1,77 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "about": {
+    "desc": "mera lund"
+  },
+  "events": [
+    {
+      "id": "1",
+      "name": "day1"
+    },
+    {
+      "id": "2",
+      "name": "day2"
+    },
+    {
+      "name": "ll",
+      "id": "78Qukf9"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "name": "business Analytics",
+      "attr": "xr"
+    },
+    {
+      "name": "lol",
+      "attr": "xr",
+      "id": "qYcLo0i"
+    }
+  ],
+  "timelines": [
+    {
+      "id": "1",
+      "event": "log",
+      "date": "02/12/2018"
+    },
+    {
+      "event": "lol",
+      "date": "2020-01-01",
+      "id": "lhCBqrg"
+    },
+    {
+      "author": "uchiha",
+      "test": "backend is complete",
+      "id": "Xf86S2S"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "1",
+      "author": "japs",
+      "test": "the world is yours"
+    },
+    {
+      "author": "uchiha",
+      "test": "gg its done!",
+      "id": "Em8OAYf"
+    }
+  ]
+}
