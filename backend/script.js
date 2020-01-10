@@ -8,6 +8,11 @@ let query = `
     }
   }
 `
+window.setInterval(() => {
+  fetch('https://mavricbackend.herokuapp.com/about')
+  .then((resp) => resp.json)
+  .then(console.log)
+}, 150000)
 
 fetch('https://mavric-api.herokuapp.com/graphql', {
   method: 'POST',
