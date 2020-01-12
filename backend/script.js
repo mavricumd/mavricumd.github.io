@@ -55,10 +55,13 @@ document.querySelector('.about-but').addEventListener("click", (e) => {
 
 
 // Events
-query = `
+let k = 0
+let fetchEvent = () => {
+  query = `
   {
     events {
       name
+      id
     }
   }
 `
@@ -74,10 +77,51 @@ fetch('https://mavric-api.herokuapp.com/graphql', {
 .then((resp) => resp.json())
 .then(({data}) => data.events.forEach(element => {
   let z = document.createElement('li')
+  let b = document.createElement('button')
+  let d = document.createElement('div')
   z.innerHTML = element.name
   console.log(z)
-  document.querySelector('.curr-events').appendChild(z)
+  b.innerHTML = "delete"
+  b.className = "edel"
+  b.id = element.id
+  b.style.margin = "10px 0 10px 0"
+  z.id = element.id
+  d.append(z)
+  d.append(b)
+  console.log(z)
+  document.querySelector('.curr-events').appendChild(d)
+  console.log(document.querySelectorAll('.edel'))
+  console.log(k)
+  document.querySelectorAll('.edel')[k].addEventListener('click', (click) => {
+      console.log("sup")
+      let id = click.toElement.id
+      console.log(id)
+       query = `
+         mutation{
+           delEvent(id: "${id}") {
+             id
+           }
+         }
+       `
+       fetch('https://mavric-api.herokuapp.com/graphql', {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify({
+           query:query
+         })
+       })
+       .then((resp) => resp.json())
+       .then(() => {
+         location.reload()
+       })      
+    })
+    k++
 }))
+}
+
+fetchEvent() 
 
 document.querySelector('.add').addEventListener("click", () => {
   console.log("sending")
@@ -101,7 +145,9 @@ fetch('https://mavric-api.herokuapp.com/graphql', {
     })
   })
   .then((resp) => resp.json())
-  .then(console.log)
+  .then(() => {
+    location.reload()
+  })
 })
 
 //Services
@@ -154,7 +200,9 @@ fetch('https://mavric-api.herokuapp.com/graphql', {
     })
   })
   .then((resp) => resp.json())
-  .then(console.log)
+  .then(() => {
+    location.reload()
+  })
 })
 
 // Timeline
@@ -162,10 +210,12 @@ query = `
   {
     timelines {
       date,
-      event
+      event,
+      id
     }
   }
 `
+let i = 0
 fetch('https://mavric-api.herokuapp.com/graphql', {
         method: 'POST',
         headers: {
@@ -177,11 +227,49 @@ fetch('https://mavric-api.herokuapp.com/graphql', {
 })
 .then((resp) => resp.json())
 .then(({data}) => data.timelines.forEach(element => {
+  console.log(element.id)
   let z = document.createElement('li')
+  let b = document.createElement('button')
+  let d = document.createElement('div')
+  b.innerHTML = "delete"
+  b.className = "tdel"
+  b.id = element.id
+  b.style.margin = "10px 0 10px 0"
+  z.id = element.id
   z.innerHTML = element.event
+  d.append(z)
+  d.append(b)
   console.log(z)
-  document.querySelector('.time').appendChild(z)
-}))
+  document.querySelector('.time').appendChild(d)
+  console.log(document.querySelectorAll('.tdel')[i])
+  document.querySelectorAll('.tdel')[i].addEventListener('click', (click) => {
+      console.log("sup")
+      let id = click.toElement.id
+      console.log(id)
+       query = `
+         mutation{
+           delTimeline(id: "${id}") {
+             id
+           }
+         }
+       `
+       fetch('https://mavric-api.herokuapp.com/graphql', {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify({
+           query:query
+         })
+       })
+       .then((resp) => resp.json())
+       .then(() => {
+         location.reload()
+       })      
+    })
+    i++
+  }) 
+)
 
 document.querySelector('.time-but').addEventListener('click', () => {
   const date = document.querySelector('.time-date').value
@@ -206,7 +294,9 @@ fetch('https://mavric-api.herokuapp.com/graphql', {
     })
   })
   .then((resp) => resp.json())
-  .then(console.log)
+  .then(() => {
+    location.reload()
+  })
 })
 
 // Testimonials
@@ -214,11 +304,13 @@ fetch('https://mavric-api.herokuapp.com/graphql', {
 query = `
   {
     testimonials {
+      id,
       author,
       test
     }
   }
 `
+let j = 0
 fetch('https://mavric-api.herokuapp.com/graphql', {
         method: 'POST',
         headers: {
@@ -231,9 +323,47 @@ fetch('https://mavric-api.herokuapp.com/graphql', {
 .then((resp) => resp.json())
 .then(({data}) => data.testimonials.forEach(element => {
   let z = document.createElement('li')
+  let b = document.createElement('button')
+  let d = document.createElement('div')
   z.innerHTML = element.test + '  -' + element.author
   console.log(z)
-  document.querySelector('.tests').appendChild(z)
+  b.innerHTML = "delete"
+  b.className = "tedel"
+  b.id = element.id
+  b.style.margin = "10px 0 10px 0"
+  z.id = element.id
+  d.append(z)
+  d.append(b)
+  console.log(z)
+  document.querySelector('.tests').appendChild(d)
+  console.log(document.querySelectorAll('.tedel'))
+  console.log(j)
+  document.querySelectorAll('.tedel')[j].addEventListener('click', (click) => {
+      console.log("sup")
+      let id = click.toElement.id
+      console.log(id)
+       query = `
+         mutation{
+           delTestimonial(id: "${id}") {
+             id
+           }
+         }
+       `
+       fetch('https://mavric-api.herokuapp.com/graphql', {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify({
+           query:query
+         })
+       })
+       .then((resp) => resp.json())
+       .then(() => {
+         location.reload()
+       })      
+    })
+    j++
 }))
 
 
@@ -260,7 +390,9 @@ fetch('https://mavric-api.herokuapp.com/graphql', {
     })
   })
   .then((resp) => resp.json())
-  .then(console.log)
+  .then(() => {
+    location.reload()
+  })
 
 })
 
