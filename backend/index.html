@@ -9,13 +9,15 @@
 <body>
     <div class="about" style="margin-bottom: 50px;">
         <h1>About</h1>
-        <textarea rows="5" cols="50" style="display: block;" class="about-text">type here</textarea>
+        <textarea rows="5" cols="50" style="display: block;" class="about-text" placeholder="type here"></textarea>
         <button type="button" class="about-but" style="margin-top: 10px;">update</button>
     </div>
     <div class="events">
         <h1>Events</h1>
-        <input class="name">
-        <button class="add">add event</button>
+        <input class="name" placeholder="event name">
+        <input type="date" style="display: block; margin-top: 10px;" class="event-date">
+        <textarea rows="5" cols="50" style="display: block; margin-top:10px;" class="event-desc" placeholder="Event Desc"></textarea>
+        <button class="add" style="margin-top: 10px;">add event</button>
         <div>
             <ul class="curr-events">
 
@@ -36,6 +38,12 @@
         <div>
             <ul class="xr"></ul>
         </div>
+    </div>
+    <div class="resources">
+        <h1>Resources</h1>
+        <ul class="resource_list">
+            
+        </ul>
     </div>
     <div class="timeline">
         <h1>Timeline</h1>
