@@ -14,7 +14,7 @@ window.setInterval(() => {
   .then(console.log)
 }, 150000)
 
-fetch('http://localhost:4000/graphql', {
+fetch('https://mavric-api.herokuapp.com/graphql', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ document.querySelector('.about-but').addEventListener("click", (e) => {
     }
   }
 `
-    fetch('http://localhost:4000/graphql', {
+    fetch('https://mavric-api.herokuapp.com/graphql', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ let fetchEvent = () => {
     }
   }
 `
-fetch('http://localhost:4000/graphql', {
+fetch('https://mavric-api.herokuapp.com/graphql', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ fetch('http://localhost:4000/graphql', {
            }
          }
        `
-       fetch('http://localhost:4000/graphql', {
+       fetch('https://mavric-api.herokuapp.com/graphql', {
          method: 'POST',
          headers: {
            'Content-Type': 'application/json',
@@ -139,7 +139,7 @@ document.querySelector('.add').addEventListener("click", () => {
       }
     }
   `
-fetch('http://localhost:4000/graphql', {
+fetch('https://mavric-api.herokuapp.com/graphql', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -163,7 +163,7 @@ query = `
     }
   }
 `
-fetch('http://localhost:4000/graphql', {
+fetch('https://mavric-api.herokuapp.com/graphql', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -194,7 +194,7 @@ document.querySelector('.xr-but').addEventListener('click', () => {
       }
     }
   `
-fetch('http://localhost:4000/graphql', {
+fetch('https://mavric-api.herokuapp.com/graphql', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -219,7 +219,7 @@ query = `
   }
 `
 
-fetch('http://localhost:4000/graphql', {
+fetch('https://mavric-api.herokuapp.com/graphql', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
@@ -247,7 +247,7 @@ query = `
   }
 `
 let i = 0
-fetch('http://localhost:4000/graphql', {
+fetch('https://mavric-api.herokuapp.com/graphql', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -284,7 +284,7 @@ fetch('http://localhost:4000/graphql', {
            }
          }
        `
-       fetch('http://localhost:4000/graphql', {
+       fetch('https://mavric-api.herokuapp.com/graphql', {
          method: 'POST',
          headers: {
            'Content-Type': 'application/json',
@@ -315,7 +315,7 @@ document.querySelector('.time-but').addEventListener('click', () => {
       }
     }
   `
-fetch('http://localhost:4000/graphql', {
+fetch('https://mavric-api.herokuapp.com/graphql', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -342,7 +342,7 @@ query = `
   }
 `
 let j = 0
-fetch('http://localhost:4000/graphql', {
+fetch('https://mavric-api.herokuapp.com/graphql', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -380,7 +380,7 @@ fetch('http://localhost:4000/graphql', {
            }
          }
        `
-       fetch('http://localhost:4000/graphql', {
+       fetch('https://mavric-api.herokuapp.com/graphql', {
          method: 'POST',
          headers: {
            'Content-Type': 'application/json',
@@ -411,7 +411,7 @@ mutation{
 }
 `
 
-fetch('http://localhost:4000/graphql', {
+fetch('https://mavric-api.herokuapp.com/graphql', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
