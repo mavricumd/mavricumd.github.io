@@ -15,7 +15,7 @@ let query = `
 //   .then(console.log)
 // }, 150000)
 
-fetch('http://129.2.213.183:4000/graphql', {
+fetch('https://129.2.213.183:4000/graphql', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ document.querySelector('.about-but').addEventListener("click", (e) => {
     }
   }
 `
-    fetch('http://129.2.213.183:4000/graphql', {
+    fetch('https://129.2.213.183:4000/graphql', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ let fetchEvent = () => {
     }
   }
 `
-fetch('http://129.2.213.183:4000/graphql', {
+fetch('https://129.2.213.183:4000/graphql', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ fetch('http://129.2.213.183:4000/graphql', {
            }
          }
        `
-       fetch('http://129.2.213.183:4000/graphql', {
+       fetch('https://129.2.213.183:4000/graphql', {
          method: 'POST',
          headers: {
            'Content-Type': 'application/json',
@@ -140,7 +140,7 @@ document.querySelector('.add').addEventListener("click", () => {
       }
     }
   `
-fetch('http://129.2.213.183:4000/graphql', {
+fetch('https://129.2.213.183:4000/graphql', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -164,7 +164,7 @@ query = `
     }
   }
 `
-fetch('http://129.2.213.183:4000/graphql', {
+fetch('https://129.2.213.183:4000/graphql', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -195,7 +195,7 @@ document.querySelector('.xr-but').addEventListener('click', () => {
       }
     }
   `
-fetch('http://129.2.213.183:4000/graphql', {
+fetch('https://129.2.213.183:4000/graphql', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -220,7 +220,7 @@ query = `
   }
 `
 
-fetch('http://129.2.213.183:4000/graphql', {
+fetch('https://129.2.213.183:4000/graphql', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
@@ -248,7 +248,7 @@ query = `
   }
 `
 let i = 0
-fetch('http://129.2.213.183:4000/graphql', {
+fetch('https://129.2.213.183:4000/graphql', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -285,7 +285,7 @@ fetch('http://129.2.213.183:4000/graphql', {
            }
          }
        `
-       fetch('http://129.2.213.183:4000/graphql', {
+       fetch('https://129.2.213.183:4000/graphql', {
          method: 'POST',
          headers: {
            'Content-Type': 'application/json',
@@ -316,7 +316,7 @@ document.querySelector('.time-but').addEventListener('click', () => {
       }
     }
   `
-fetch('http://129.2.213.183:4000/graphql', {
+fetch('https://129.2.213.183:4000/graphql', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -343,7 +343,7 @@ query = `
   }
 `
 let j = 0
-fetch('http://129.2.213.183:4000/graphql', {
+fetch('https://129.2.213.183:4000/graphql', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -381,7 +381,7 @@ fetch('http://129.2.213.183:4000/graphql', {
            }
          }
        `
-       fetch('http://129.2.213.183:4000/graphql', {
+       fetch('https://129.2.213.183:4000/graphql', {
          method: 'POST',
          headers: {
            'Content-Type': 'application/json',
@@ -412,7 +412,7 @@ mutation{
 }
 `
 
-fetch('http://129.2.213.183:4000/graphql', {
+fetch('https://129.2.213.183:4000/graphql', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
