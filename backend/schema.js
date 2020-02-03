@@ -59,7 +59,7 @@ const RootQuery = new GraphQLObjectType({
         about:{
             type: AboutQuery,
             resolve(parentValue, args) {
-                return axios.get('https://mavricbackend.herokuapp.com/about').then(res => res.data)
+                return axios.get('https://129.2.213.183:3000/about').then(res => res.data)
             }
         },
         event:{
@@ -68,13 +68,13 @@ const RootQuery = new GraphQLObjectType({
                 id:{type: GraphQLString}
             },
             resolve(parentValue, args) {
-                return axios.get('https://mavricbackend.herokuapp.com/events/' + args.id).then(res => res.data)
+                return axios.get('https://129.2.213.183:3000/events/' + args.id).then(res => res.data)
             }
         },
         events: {
             type: new GraphQLList(EventsQuery),
             resolve() {
-                return axios.get('https://mavricbackend.herokuapp.com/events').then(res => res.data)
+                return axios.get('https://129.2.213.183:3000/events').then(res => res.data)
             }
         },
         service: {
@@ -83,13 +83,13 @@ const RootQuery = new GraphQLObjectType({
                 id:{type: GraphQLString}
             },
             resolve(parentValue, args) {
-                return axios.get('https://mavricbackend.herokuapp.com/services/' + args.id).then(res => res.data)
+                return axios.get('https://129.2.213.183:3000/services/' + args.id).then(res => res.data)
             }
         },
         services: {
             type: new GraphQLList(ServiceQuery),
             resolve() {
-                return axios.get('https://mavricbackend.herokuapp.com/services').then(res => res.data)
+                return axios.get('https://129.2.213.183:3000/services').then(res => res.data)
             }
         },
         timeline: {
@@ -98,13 +98,13 @@ const RootQuery = new GraphQLObjectType({
                 id: {type:GraphQLString}
             },
             resolve(parentValue, args) {
-                return axios.get('https://mavricbackend.herokuapp.com/timelines/' + args.id).then(res => res.data)
+                return axios.get('https://129.2.213.183:3000/timelines/' + args.id).then(res => res.data)
             }
         },
         timelines: {
             type: new GraphQLList(TimelineQuery),
             resolve() {
-                return axios.get('https://mavricbackend.herokuapp.com/timelines').then(res => res.data)
+                return axios.get('https://129.2.213.183:3000/timelines').then(res => res.data)
             }
         },
         testimonial: {
@@ -113,13 +113,13 @@ const RootQuery = new GraphQLObjectType({
                 id: {type: GraphQLString}
             },
             resolve(parentValue, args) {
-                return axios.get('https://mavricbackend.herokuapp.com/testimonials/' + args.id).then(res => res.data)
+                return axios.get('https://129.2.213.183:3000/testimonials/' + args.id).then(res => res.data)
             }
         },
         testimonials: {
             type: new GraphQLList(TestimonialsQuery),
             resolve() {
-                return axios.get('https://mavricbackend.herokuapp.com/testimonials').then(res => res.data)
+                return axios.get('https://129.2.213.183:3000/testimonials').then(res => res.data)
             }
         }
     }
@@ -135,7 +135,7 @@ const mutation = new GraphQLObjectType({
                 desc: {type: new GraphQLNonNull(GraphQLString)}
             },
             resolve(parentValue, args) {
-                return axios.post('https://mavricbackend.herokuapp.com/about', {
+                return axios.post('https://129.2.213.183:3000/about', {
                     desc: args.desc
                 }).then(res => res.data)
             }
@@ -146,7 +146,7 @@ const mutation = new GraphQLObjectType({
                 name: {type: new GraphQLNonNull(GraphQLString)}
             },
             resolve(parentValue, args) {
-                return axios.post('https://mavricbackend.herokuapp.com/events', {
+                return axios.post('https://129.2.213.183:3000/events', {
                     name: args.name
                 }).then(res => res.data)
             }
@@ -158,7 +158,7 @@ const mutation = new GraphQLObjectType({
                 attr: {type: new GraphQLNonNull(GraphQLString)}
             },
             resolve(parentValue, args){
-                return axios.post('https://mavricbackend.herokuapp.com/services', {
+                return axios.post('https://129.2.213.183:3000/services', {
                     name: args.name,
                     attr: args.attr
                 }).then(res => res.data)
@@ -171,7 +171,7 @@ const mutation = new GraphQLObjectType({
                 date: {type: new GraphQLNonNull(GraphQLString)}
             },
             resolve(parentValue, args){
-                return axios.post('https://mavricbackend.herokuapp.com/timelines', {
+                return axios.post('https://129.2.213.183:3000/timelines', {
                     event: args.event,
                     date: args.date
                 }).then(res => res.data)
@@ -184,7 +184,7 @@ const mutation = new GraphQLObjectType({
                 test: {type: new GraphQLNonNull(GraphQLString)}
             },
             resolve(parentValue, args){
-                return axios.post('https://mavricbackend.herokuapp.com/testimonials', {
+                return axios.post('https://129.2.213.183:3000/testimonials', {
                     author: args.author,
                     test: args.test
                 }).then(res => res.data)
