@@ -25,7 +25,9 @@ fetch('https://mavric.bid', {
   })
 })
 .then(resp => resp.json())
-.then(console.log)
+.then(({data}) => 
+  document.querySelector(".about-text").innerHTML = data.about.desc
+)
 
 // POST for about queries
 
