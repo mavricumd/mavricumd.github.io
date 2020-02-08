@@ -14,7 +14,7 @@ let query = `
 //   .then(console.log)
 // }, 150000)
 
-fetch('https://129.2.213.183:4000/graphql', {
+fetch('https://mavric.bid', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
@@ -24,7 +24,7 @@ fetch('https://129.2.213.183:4000/graphql', {
   })
 })
 .then(resp => resp.json())
-.then(({data}) => document.querySelector('.about-text').innerHTML = data.about.desc)
+.then(console.log)
 
 // POST for about queries
 
@@ -40,7 +40,7 @@ document.querySelector('.about-but').addEventListener("click", (e) => {
     }
   }
 `
-    fetch('https://129.2.213.183:4000/graphql', {
+    fetch('https://mavric.bid', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ let fetchEvent = () => {
     }
   }
 `
-fetch('https://129.2.213.183:4000/graphql', {
+fetch('https://mavric.bid', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ fetch('https://129.2.213.183:4000/graphql', {
            }
          }
        `
-       fetch('https://129.2.213.183:4000/graphql', {
+       fetch('https://mavric.bid', {
          method: 'POST',
          headers: {
            'Content-Type': 'application/json',
@@ -139,7 +139,7 @@ document.querySelector('.add').addEventListener("click", () => {
       }
     }
   `
-fetch('https://129.2.213.183:4000/graphql', {
+fetch('https://mavric.bid', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -163,7 +163,7 @@ query = `
     }
   }
 `
-fetch('https://129.2.213.183:4000/graphql', {
+fetch('https://mavric.bid', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -194,7 +194,7 @@ document.querySelector('.xr-but').addEventListener('click', () => {
       }
     }
   `
-fetch('https://129.2.213.183:4000/graphql', {
+fetch('https://mavric.bid', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -219,7 +219,7 @@ query = `
   }
 `
 
-fetch('https://129.2.213.183:4000/graphql', {
+fetch('https://mavric.bid', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
@@ -247,7 +247,7 @@ query = `
   }
 `
 let i = 0
-fetch('https://129.2.213.183:4000/graphql', {
+fetch('https://mavric.bid', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -284,7 +284,7 @@ fetch('https://129.2.213.183:4000/graphql', {
            }
          }
        `
-       fetch('https://129.2.213.183:4000/graphql', {
+       fetch('https://mavric.bid', {
          method: 'POST',
          headers: {
            'Content-Type': 'application/json',
@@ -315,7 +315,7 @@ document.querySelector('.time-but').addEventListener('click', () => {
       }
     }
   `
-fetch('https://129.2.213.183:4000/graphql', {
+fetch('https://mavric.bid', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -342,7 +342,7 @@ query = `
   }
 `
 let j = 0
-fetch('https://129.2.213.183:4000/graphql', {
+fetch('https://mavric.bid', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -380,7 +380,7 @@ fetch('https://129.2.213.183:4000/graphql', {
            }
          }
        `
-       fetch('https://129.2.213.183:4000/graphql', {
+       fetch('https://mavric.bid', {
          method: 'POST',
          headers: {
            'Content-Type': 'application/json',
@@ -411,7 +411,7 @@ mutation{
 }
 `
 
-fetch('https://129.2.213.183:4000/graphql', {
+fetch('https://mavric.bid', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
