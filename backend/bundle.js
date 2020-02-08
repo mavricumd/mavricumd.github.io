@@ -168,6 +168,7 @@ fetch('https://mavric.bid', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'CORS': 'no-cors'
         },
         body: JSON.stringify({
           query: query
@@ -199,6 +200,7 @@ fetch('https://mavric.bid', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      'mode': 'no-cors'
     },
     body: JSON.stringify({
       query:query
@@ -223,7 +225,8 @@ query = `
 fetch('https://mavric.bid', {
   method: 'POST',
   headers: {
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'mode': 'no-cors'
   },
   body: JSON.stringify({
     query:query
@@ -252,6 +255,7 @@ fetch('https://mavric.bid', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'mode': 'no-cors'
         },
         body: JSON.stringify({
           query: query
@@ -289,6 +293,7 @@ fetch('https://mavric.bid', {
          method: 'POST',
          headers: {
            'Content-Type': 'application/json',
+           'mode': 'no-cors'
          },
          body: JSON.stringify({
            query:query
@@ -320,6 +325,7 @@ fetch('https://mavric.bid', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      'mode': 'no-cors'
     },
     body: JSON.stringify({
       query:query
@@ -347,6 +353,7 @@ fetch('https://mavric.bid', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'mode': 'no-cors'
         },
         body: JSON.stringify({
           query: query
@@ -385,6 +392,7 @@ fetch('https://mavric.bid', {
          method: 'POST',
          headers: {
            'Content-Type': 'application/json',
+           'mode': 'no-cors'
          },
          body: JSON.stringify({
            query:query
@@ -416,6 +424,7 @@ fetch('https://mavric.bid', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      'mode': 'no-cors'
     },
     body: JSON.stringify({
       query:query
