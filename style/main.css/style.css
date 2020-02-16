@@ -108,3 +108,91 @@ body {
     font-size: 23px;
     margin-left: 5em;
     line-height: 40px; }
+
+.events h1 {
+  font-family: "Interstate-Black";
+  font-size: 40px;
+  padding-top: 3em;
+  margin-left: 7.5%; }
+
+.events .edisp {
+  display: flex;
+  flex-direction: column; }
+  .events .edisp .row {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    margin-left: 7.5%; }
+    .events .edisp .row .left {
+      width: 50%; }
+      .events .edisp .row .left .num, .events .edisp .row .left .title {
+        font-family: "Interstate-Bold";
+        font-size: 1.75em; }
+      .events .edisp .row .left .desc {
+        font-family: "Interstate-Light";
+        font-size: 1.15em;
+        line-height: 30px;
+        max-width: 75%; }
+    .events .edisp .row .right {
+      width: 50%; }
+      .events .edisp .row .right .holder {
+        display: flex;
+        justify-content: center; }
+        .events .edisp .row .right .holder img {
+          -webkit-box-shadow: -7px 25px 29px 0px rgba(70, 70, 70, 0.31);
+          -moz-box-shadow: -7px 25px 29px 0px rgba(70, 70, 70, 0.31);
+          box-shadow: -7px 25px 29px 0px rgba(70, 70, 70, 0.31); }
+  .events .edisp .row:nth-child(2n) {
+    margin-top: 4em;
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    margin-left: 7.5%; }
+    .events .edisp .row:nth-child(2n) .right {
+      width: 50%;
+      margin: 0 auto; }
+      .events .edisp .row:nth-child(2n) .right .num, .events .edisp .row:nth-child(2n) .right .title {
+        font-family: "Interstate-Bold";
+        font-size: 1.75em; }
+      .events .edisp .row:nth-child(2n) .right .desc {
+        font-family: "Interstate-Light";
+        font-size: 1.15em;
+        line-height: 30px;
+        max-width: 75%; }
+    .events .edisp .row:nth-child(2n) .left {
+      width: 50%; }
+      .events .edisp .row:nth-child(2n) .left .holder {
+        display: flex;
+        align-items: center; }
+        .events .edisp .row:nth-child(2n) .left .holder img {
+          -webkit-box-shadow: -7px 25px 29px 0px rgba(70, 70, 70, 0.31);
+          -moz-box-shadow: -7px 25px 29px 0px rgba(70, 70, 70, 0.31);
+          box-shadow: -7px 25px 29px 0px rgba(70, 70, 70, 0.31); }
+
+.services h1 {
+  font-family: "Interstate-Black";
+  font-size: 40px;
+  padding-top: 3em;
+  margin-left: 7.5%; }
+
+.services .content {
+  display: flex; }
+  .services .content .title {
+    width: 50%;
+    background: #001738;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .services .content .title p {
+      color: white;
+      font-family: "Interstate-Bold";
+      font-size: 3em; }
+  .services .content .options {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Interstate-Light";
+    font-size: 2em; }

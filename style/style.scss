@@ -127,3 +127,117 @@ body {
         line-height: 40px;
     }
 }
+
+.events {
+    h1 {
+        font-family: "Interstate-Black";
+        font-size: 40px;
+        padding-top: 3em;
+        margin-left: 7.5%;
+    }
+    .edisp {
+        display: flex;
+        flex-direction: column;
+        .row {
+            display: flex;
+            justify-content: space-around;
+            max-width: 100%;
+            margin-left: 7.5%;
+            .left {
+                width: 50%;
+                .num, .title {
+                    font-family: "Interstate-Bold";
+                    font-size: 1.75em;
+                }
+                .desc {
+                    font-family: "Interstate-Light";
+                    font-size: 1.15em;
+                    line-height: 30px;
+                    max-width: 75%;
+                }
+            }
+            .right {
+                width: 50%;
+                .holder {
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        -webkit-box-shadow: -7px 25px 29px 0px rgba(70,70,70,0.31);
+                        -moz-box-shadow: -7px 25px 29px 0px rgba(70,70,70,0.31);
+                        box-shadow: -7px 25px 29px 0px rgba(70,70,70,0.31);
+                    }
+                    
+                }
+            }
+        }
+        .row:nth-child(2n) {
+            margin-top: 4em;
+            display: flex;
+            justify-content: space-around;
+            max-width: 100%;
+            margin-left: 7.5%;
+            .right {
+                width: 50%;
+                margin: 0 auto;
+                .num, .title {
+                    font-family: "Interstate-Bold";
+                    font-size: 1.75em;
+                }
+                .desc {
+                    font-family: "Interstate-Light";
+                    font-size: 1.15em;
+                    line-height: 30px;
+                    max-width: 75%;
+                }
+            }
+            .left {
+                width: 50%;
+                .holder {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        -webkit-box-shadow: -7px 25px 29px 0px rgba(70,70,70,0.31);
+                        -moz-box-shadow: -7px 25px 29px 0px rgba(70,70,70,0.31);
+                        box-shadow: -7px 25px 29px 0px rgba(70,70,70,0.31);
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+.services {
+    h1 {
+        font-family: "Interstate-Black";
+        font-size: 40px;
+        padding-top: 3em;
+        margin-left: 7.5%;
+    }
+    .content {
+        display: flex;
+        .title {
+            width: 50%;
+            background: #001738;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+                color: white;
+                font-family: "Interstate-Bold";
+                font-size: 3em;
+            }
+        }
+        .options {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family:  "Interstate-Light";
+            font-size: 2em;
+        }
+    }
+    
+}
