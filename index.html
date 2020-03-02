@@ -105,16 +105,22 @@
     <section class="resources">
         <h1>Resources</h1>
         <div class="map">
-            <div class="left">
+            <div class="left-re">
                 <p></p>
             </div>
             <div class="right">
                 <div id="map"></div>
                 <script>
+                    let date = new Date()
+                    let time = date.getHours()
+                    console.log(time)
+                    let theme = "light"
+                    if(time > 18 || time < 6 ) 
+                        theme = "dark"
                     mapboxgl.accessToken = 'pk.eyJ1IjoiamFwbmVldCIsImEiOiJjazQzM25majcwM3diM21uMXk4bnVieWl6In0.Nw00DmDETPkUH7dtCSzC9Q';
                     var map = new mapboxgl.Map({
                     container: 'map', // container id
-                    style: 'mapbox://styles/mapbox/light-v10', //hosted style id
+                    style: `mapbox://styles/mapbox/${theme}-v10`, //hosted style id
                     center: [-76.937759, 38.989697], // starting position
                     zoom: 14 // starting zoom
                     });
@@ -165,7 +171,45 @@
                 </script>
             </div>
         </div>
-        
+    </section>
+    <section class="timeline">
+        <h1>Timeline</h1>
+        <div class="time">
+            <div class="line1">
+                <p>This happened tonigh</p>
+                <p class="date">April <span>'18</span></p>
+            </div>
+            <div class="line1">
+                <p>This happened tonigh</p>
+                <p class="date">May <span>'18</span></p>
+            </div>
+             <div class="line1">
+                <p>This happened tonigh</p>
+                <p class="date">May <span>'18</span></p>
+            </div>
+             <div class="line1">
+                <p>This happened tonigh</p>
+                <p class="date">May <span>'18</span></p>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="data">
+            <h1>What others are saying!</h1>
+            <div class="cards">
+                <div class="card">
+
+                </div>
+                <div class="card">
+                    
+                </div>
+
+            </div>           
+        </div>
+        <div class="card-3">
+                    
+        </div>
     </section>
 </body>
+<script src ="script.js"></script>
 </html>

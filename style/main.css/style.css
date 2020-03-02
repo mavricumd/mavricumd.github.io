@@ -206,9 +206,11 @@ body {
     margin-left: 7.5%; }
   .resources .map {
     display: flex; }
-    .resources .map .left {
+    .resources .map .left-re {
       width: 50%;
       height: 100vh; }
+      .resources .map .left-re .resource-p {
+        font-family: "Interstate-Light"; }
     .resources .map .right {
       width: 50%;
       height: 100vh; }
@@ -216,9 +218,64 @@ body {
         width: 100%;
         height: 100%; }
       .resources .map .right .marker {
-        background-image: url("../../assets/brc.png");
         background-size: cover;
         width: 50px;
         height: 50px;
         border-radius: 50%;
         cursor: pointer; }
+
+.timeline {
+  margin-top: 120px;
+  height: 50vh; }
+  .timeline h1 {
+    font-family: "Interstate-Black";
+    font-size: 40px;
+    padding-top: 1em;
+    margin-left: 7.5%; }
+  .timeline .time {
+    display: flex;
+    justify-content: space-around; }
+    .timeline .time .line1 .date {
+      display: inline;
+      font-family: "Interstate-Black";
+      font-size: 2em; }
+      .timeline .time .line1 .date p {
+        display: inline; }
+
+.testimonials {
+  height: 100vh; }
+  .testimonials h1 {
+    font-family: "Interstate-Black";
+    font-size: 50px;
+    padding-top: 2em;
+    margin-left: 7.5%;
+    color: white; }
+  .testimonials .data {
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
+    background: #001738; }
+    .testimonials .data .cards {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; }
+      .testimonials .data .cards .card {
+        margin-right: 20%;
+        height: 120px;
+        width: 400px;
+        background: #F9FAFC;
+        border-radius: 3px;
+        margin-bottom: 5%;
+        box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.14); }
+      .testimonials .data .cards .card:nth-child(2) {
+        margin-right: 50%;
+        z-index: 2; }
+  .testimonials .card-3 {
+    height: 120px;
+    width: 400px;
+    background: #F9FAFC;
+    border-radius: 3px;
+    box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.14);
+    position: absolute;
+    top: auto;
+    margin-top: -11%;
+    right: 20%; }
