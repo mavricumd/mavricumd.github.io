@@ -1,4 +1,17 @@
-console.log("baap is here")
+let jump = require("jump.js")
+
+let ab = document.querySelector(".ab")
+let ev = document.querySelector(".ev")
+let about = document.querySelector(".about")
+let event = document.querySelector(".events")
+
+ab.addEventListener("click", () => {
+  jump(about)
+})
+
+ev.addEventListener("click", () => {
+  jump(event)
+})
 
 let query = `
 

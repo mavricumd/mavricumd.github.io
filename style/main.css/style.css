@@ -32,7 +32,8 @@ body {
       width: 60%;
       display: flex;
       justify-content: space-evenly;
-      font-family: "Interstate-Bold"; }
+      font-family: "Interstate-Bold";
+      cursor: pointer; }
     .landing nav a {
       margin-top: 16px;
       text-decoration: none;
