@@ -179,16 +179,24 @@ body {
 .services .content {
   display: flex; }
   .services .content .title {
+    position: relative;
     width: 50%;
     background: #001738;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center; }
-    .services .content .title p {
+    .services .content .title .name {
       color: white;
       font-family: "Interstate-Bold";
-      font-size: 3em; }
+      font-size: 3em;
+      text-align: center; }
+    .services .content .title i {
+      right: 40px;
+      top: 366px;
+      font-size: 1em;
+      color: white;
+      cursor: pointer; }
   .services .content .options {
     width: 50%;
     display: flex;

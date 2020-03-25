@@ -218,17 +218,35 @@ body {
     .content {
         display: flex;
         .title {
+            position: relative;
             width: 50%;
             background: #001738;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            p {
+            .name {
                 color: white;
                 font-family: "Interstate-Bold";
                 font-size: 3em;
+                text-align: center;
             }
+            i {
+                right: 40px;
+                top: 366px;
+                font-size: 1em;
+                color: white;
+                cursor: pointer;
+            }
+            // .slick-arrow {
+            //     border: none;
+            //     width: 20px;
+            //     height: 20px;
+            //     border-radius: 50%;
+            // }
+            // .slick-next:before {
+            //     content: '->';
+            // }
         }
         .options {
             width: 50%;
@@ -256,11 +274,14 @@ body {
         .left-re {
             width: 50%;
             height: 100vh;
+            .row {
+                
+            }
             .resource-p {
                 font-family: "Interstate-Light";
             }
         }
-    
+        
         .right {
             width: 50%;
             height: 100vh;

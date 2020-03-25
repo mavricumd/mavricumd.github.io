@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "browserify": "^16.5.0",
     "cacheable-request": "^2.1.4",
     "configstore": "^5.0.0",
