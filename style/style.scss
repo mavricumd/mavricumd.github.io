@@ -273,12 +273,20 @@ body {
         display: flex;
         .left-re {
             width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             height: 100vh;
+            .tab {
+                width: 100%;
+            }
             .row {
                 
             }
             .resource-p {
                 font-family: "Interstate-Light";
+                padding: 30px;
+                cursor: pointer;
             }
         }
         
