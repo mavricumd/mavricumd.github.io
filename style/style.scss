@@ -11,6 +11,46 @@
     src: url("/assets/fonts/interstate-black-cond-58b642507872b.otf");
 }
 
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin sm {
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices
+ @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
+ 
 html {
     height: 100vh;
 }
@@ -24,9 +64,15 @@ body {
     nav {
         font-size: 1.1rem;
         padding-top: 10px;
+        @include sm {
+            font-size: 1em;
+        }
         .logo {
             margin-top: 16px;
             width: 100px;
+            @include sm {
+                display: none;
+            }
         }
         display: flex;
         width: 100%;
@@ -34,7 +80,7 @@ body {
         .links {
             width: 60%;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-around;
             font-family: "Interstate-Bold";
             cursor: pointer;
         }
@@ -58,6 +104,9 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            @include sm {
+                display: none;
+            }
             .wrap {
                 filter: drop-shadow(7px 14px 19px rgba(70,70,70,0.26));
                 margin-left: 150px;
@@ -79,10 +128,16 @@ body {
             justify-content: center;
             color: #001738;
             text-align: center;
+            @include sm {
+                width: 100%;
+            }
             h1 {
                 font-family: "Interstate-Black";
                 font-size: 145px;
                 margin: 0;
+                @include sm {
+                    font-size: 100px;
+                }
             }
             p {
                 font-family: "Interstate-Light";
@@ -113,12 +168,21 @@ body {
         position: absolute;
         right: 0px;
         z-index: -2;
+        @include sm {
+            display: none;
+        }
     }
     h1 {
         font-family: "Interstate-Black";
         font-size: 40px;
         padding-top: 3em;
         margin-left: 3em;
+        @include sm {
+            padding-top: 0px;
+            margin: 0;
+            margin-top: 30px;
+            text-align: center;
+        }
     }
     p {
         max-width: 70%;
@@ -126,6 +190,13 @@ body {
         font-size: 23px;
         margin-left: 5em;
         line-height: 40px;
+        @include sm {
+            font-size: 18px;
+            padding: 30px 30px 0 30px;
+            max-width: 100%;
+            margin: 0;
+            // text-align: center;
+        }
     }
 }
 
@@ -135,10 +206,20 @@ body {
         font-size: 40px;
         padding-top: 3em;
         margin-left: 7.5%;
+        @include sm {
+            margin: 0 auto;
+            text-align: center;
+        }
     }
     .edisp {
         display: flex;
         flex-direction: column;
+        @include sm {
+            .row {
+                display: flex;
+                flex-direction: column;
+            }
+        }
         .row {
             display: flex;
             justify-content: space-around;

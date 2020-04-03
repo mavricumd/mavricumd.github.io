@@ -4022,7 +4022,8 @@ fetch('https://mavric.bid', {
       for(let loc of geojson.features) {
         console.log(loc.properties.description)
         console.log(locate)
-        console.log("hi" === "hi")
+        // console.log("hi" === "hi")
+        console.log("checking equality")
         console.log(`${loc.properties.description}`.toString() === `${locate}`.toString())
         if(`${loc.properties.description}` == `${locate}`) {
           let x = loc.geometry.coordinates[0]
@@ -4096,4 +4097,57 @@ document.querySelector(".glide__arrow").addEventListener("click", () => {
   setInterval(change, 1000)
 })
 
+// Responsive
+
+if(screen.width < 576) {
+
+  // Handling Events
+  let disp = document.querySelector(".edisp")
+  let len = document.querySelector(".edisp").children.length
+  for(let i=0;i<len;i++) {
+    document.querySelector(".edisp").children[i].firstElementChild.classList.remove("left")
+    document.querySelector(".edisp").children[i].firstElementChild.classList.add("bot")
+    document.querySelector(".edisp").children[i].lastElementChild.classList.remove("right")
+    document.querySelector(".edisp").children[i].lastElementChild.classList.add("top")
+  }
+  for(let i =0 ;i<len;i++) {
+    if(i%2 == 0) {
+      let bot = []
+      let top = []
+      for(let j=0;j<disp.children[i].children[0].children.length;j++)
+        bot.push(disp.children[i].children[0].children[j])
+      for(let j =0;j<disp.children[i].children[1].children.length;j++)
+        top.push(disp.children[i].children[1].children[j])
+      console.log(bot)
+      console.log(top)
+      disp.children[i].children[0].innerHTML = ""
+      // console.log(disp.children[i].children[0])
+      // console.log(top[0])
+      disp.children[i].children[0].appendChild(top[0])
+      disp.children[i].children[1].innerHTML = ""
+      for(let j = 0; j<bot.length;j++){
+        console.log(bot[j])
+        disp.children[i].children[1].appendChild(bot[j])
+      }
+    }
+  }
+  
+  // Handling Services
+
+  let services = document.querySelector(".services")
+  services.children[1].innerHTML = ""
+  let xr = document.createElement("div")
+  xr.classList.add("xr-m")
+  let gov = document.createElement("div")
+  gov.classList.add("gov-m")
+  let aca = document.createElement("div")
+  aca.classList.add("div")
+  services.children[1].appendChild(xr)
+  services.children[1].appendChild(gov)
+  services.children[1].appendChild(aca)
+
+  for(let i =0; i<services.children[1].length;i++) {
+    
+  }
+}
 },{"@glidejs/glide":1,"jump.js":2}]},{},[3]);
