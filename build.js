@@ -4138,16 +4138,42 @@ if(screen.width < 576) {
   services.children[1].innerHTML = ""
   let xr = document.createElement("div")
   xr.classList.add("xr-m")
+  xr.classList.add("rec")
   let gov = document.createElement("div")
   gov.classList.add("gov-m")
+  gov.classList.add("rec")
   let aca = document.createElement("div")
-  aca.classList.add("div")
+  aca.classList.add("aca-m")
+  aca.classList.add("rec")
   services.children[1].appendChild(xr)
   services.children[1].appendChild(gov)
   services.children[1].appendChild(aca)
-
-  for(let i =0; i<services.children[1].length;i++) {
-    
+  console.log(services.children[1].children)
+  let html = ""
+  for (let i =0 ; i<services.children[1].children.length;i++) {
+    switch (services.children[1].children[i].className.split("-")[0]) {
+      case "xr":
+          html = `
+          <p>XR Companies</p>
+          <i class="fas fa-sort-down"></i>
+        `
+        services.children[1].children[i].innerHTML = html
+        break;
+      case "gov":
+          html = `
+          <p>Government </p>
+          <i class="fas fa-sort-down"></i>
+        `
+        services.children[1].children[i].innerHTML = html
+        break;
+      case "aca":
+          html = `
+          <p>Academic</p>
+          <i class="fas fa-sort-down"></i>
+        `
+        services.children[1].children[i].innerHTML = html
+        break;
+    }
   }
 }
 },{"@glidejs/glide":1,"jump.js":2}]},{},[3]);

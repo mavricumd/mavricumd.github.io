@@ -56,6 +56,7 @@ html {
 }
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 .landing {
@@ -214,17 +215,16 @@ body {
     .edisp {
         display: flex;
         flex-direction: column;
-        @include sm {
-            .row {
-                display: flex;
-                flex-direction: column;
-            }
-        }
         .row {
             display: flex;
             justify-content: space-around;
             max-width: 100%;
             margin-left: 7.5%;
+            @include sm {
+                display: flex;
+                flex-direction: column;
+                margin-left: 2%;
+            }
             .left {
                 width: 50%;
                 .num, .title {
@@ -298,6 +298,22 @@ body {
     }
     .content {
         display: flex;
+        @include sm {
+            flex-direction: column;
+            .rec {
+                display: flex;
+                position: relative;
+                p {
+                    margin-left: 3em;
+                }
+                i {
+                    height: 14px;
+                    position: absolute;
+                    top: 15px;
+                    right: 50px;
+                }
+            }
+        }
         .title {
             position: relative;
             width: 50%;
@@ -351,8 +367,14 @@ body {
         margin-left: 7.5%;
     }
     .map {
+        @include sm {
+            display: block;
+        }
         display: flex;
         .left-re {
+            @include sm {
+                display: none;
+            }
             width: 50%;
             display: flex;
             align-items: center;
@@ -372,6 +394,10 @@ body {
         }
         
         .right {
+            @include sm {
+                width: 100%;
+                height: 75vh;
+            }
             width: 50%;
             height: 100vh;
             #map {
