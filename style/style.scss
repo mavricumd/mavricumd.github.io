@@ -539,12 +539,15 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            // filter: drop-shadow(10px 13px 11px rgba(229,233,242,1));
             #sam, #lucien, #japs {
                 border-radius: 50%;
                 margin: 0 auto;
                 width: 50%;
                 box-shadow: (10px 13px 11px rgba(229,233,242,1));
+                @include sm {
+                    width: 30%;
+                    margin-top: 20px;
+                }
             }
             p {
                 font-family: "Interstate-Bold";

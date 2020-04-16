@@ -414,6 +414,10 @@ body {
       margin: 0 auto;
       width: 50%;
       box-shadow: 10px 13px 11px #e5e9f2; }
+      @media (max-width: 576px) {
+        .team .pics .wrap #sam, .team .pics .wrap #lucien, .team .pics .wrap #japs {
+          width: 30%;
+          margin-top: 20px; } }
     .team .pics .wrap p {
       font-family: "Interstate-Bold";
       font-size: 1.25em;
