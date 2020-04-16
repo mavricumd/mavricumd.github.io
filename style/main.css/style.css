@@ -11,7 +11,8 @@
   src: url("/assets/fonts/interstate-black-cond-58b642507872b.otf"); }
 
 html {
-  height: 100vh; }
+  height: 100vh;
+  overflow-x: hidden; }
 
 body {
   margin: 0;
@@ -189,6 +190,9 @@ body {
     justify-content: space-around;
     max-width: 100%;
     margin-left: 7.5%; }
+    @media (max-width: 576px) {
+      .events .edisp .row:nth-child(2n) {
+        margin-left: 0%; } }
     .events .edisp .row:nth-child(2n) .right {
       width: 50%;
       margin: 0 auto; }
@@ -306,6 +310,10 @@ body {
 .timeline {
   margin-top: 120px;
   height: 50vh; }
+  @media (max-width: 576px) {
+    .timeline {
+      margin-top: -50px;
+      height: auto; } }
   .timeline h1 {
     font-family: "Interstate-Black";
     font-size: 40px;
@@ -314,6 +322,11 @@ body {
   .timeline .time {
     display: flex;
     justify-content: space-around; }
+    @media (max-width: 576px) {
+      .timeline .time {
+        display: flex;
+        flex-direction: column;
+        align-items: center; } }
     .timeline .time .line1 .date {
       display: inline;
       font-family: "Interstate-Black";
@@ -341,6 +354,11 @@ body {
     position: absolute;
     top: 25%;
     right: 0%; }
+    @media (max-width: 576px) {
+      .testimonials .cards {
+        justify-content: center;
+        width: 100%;
+        height: 600px; } }
     .testimonials .cards .card {
       margin-right: 50%;
       height: 120px;
@@ -349,9 +367,20 @@ body {
       border-radius: 3px;
       margin-bottom: 15%;
       box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.14); }
+      @media (max-width: 576px) {
+        .testimonials .cards .card {
+          margin-right: 0;
+          margin: 0 auto;
+          width: 350px;
+          margin-bottom: 20px; } }
     .testimonials .cards .card:nth-child(2) {
       margin-right: 120%;
       z-index: 2; }
+      @media (max-width: 576px) {
+        .testimonials .cards .card:nth-child(2) {
+          z-index: 0;
+          margin: 0 auto;
+          margin-bottom: 20px; } }
   .testimonials .card-3 {
     height: 120px;
     width: 400px;
@@ -373,18 +402,24 @@ body {
   margin-top: 50px;
   display: flex;
   justify-content: center; }
+  @media (max-width: 576px) {
+    .team .pics {
+      flex-direction: column; } }
   .team .pics .wrap {
-    filter: drop-shadow(10px 13px 11px #e5e9f2); }
-    .team .pics .wrap .holder {
-      clip-path: circle(30% at 40% 40%); }
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .team .pics .wrap #sam, .team .pics .wrap #lucien, .team .pics .wrap #japs {
+      border-radius: 50%;
+      margin: 0 auto;
+      width: 50%;
+      box-shadow: 10px 13px 11px #e5e9f2; }
     .team .pics .wrap p {
       font-family: "Interstate-Bold";
       font-size: 1.25em;
-      width: 150px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      margin-top: 20px; }
     .team .pics .wrap p:nth-child(3n) {
       font-family: "Interstate-Light";
       font-size: 1em;
-      width: 100px;
-      margin: 0 auto;
       margin-top: 20px; }
