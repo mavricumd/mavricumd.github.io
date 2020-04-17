@@ -217,6 +217,25 @@ body {
     .edisp {
         display: flex;
         flex-direction: column;
+        .bot {
+            display: flex;
+            justify-content: center;
+        }
+        .top {
+            display: flex;
+            flex-direction: column;
+            .num, .title {
+                font-family: "Interstate-Bold";
+                font-size: 1em;
+            }
+            .desc {
+                font-family: "Interstate-Light";
+                font-size: 1.15em;
+                line-height: 30px;
+                max-width: 75%;
+                margin: 0 auto;
+            }
+        }
         .row {
             display: flex;
             justify-content: space-around;
