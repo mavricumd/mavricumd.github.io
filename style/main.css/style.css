@@ -258,17 +258,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+    .services .content .title .not {
+      display: none; }
+    .services .content .title .active {
+      display: block; }
     .services .content .title .name {
       color: white;
       font-family: "Interstate-Bold";
       font-size: 3em;
       text-align: center; }
     .services .content .title i {
-      right: 40px;
-      top: 366px;
       font-size: 1em;
       color: white;
-      cursor: pointer; }
+      cursor: pointer;
+      position: relative; }
+    .services .content .title .right {
+      left: 40px;
+      top: 5px;
+      font-size: 2em; }
+    .services .content .title .left {
+      right: 40px;
+      top: 5px;
+      font-size: 2em; }
   .services .content .options {
     width: 50%;
     display: flex;

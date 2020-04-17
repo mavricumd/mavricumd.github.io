@@ -346,6 +346,12 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            .not {
+                display: none;
+            }
+            .active {
+                display: block;
+            }
             .name {
                 color: white;
                 font-family: "Interstate-Bold";
@@ -353,11 +359,24 @@ body {
                 text-align: center;
             }
             i {
-                right: 40px;
-                top: 366px;
+                // right: 40px;
+                // top: 366px;
                 font-size: 1em;
                 color: white;
                 cursor: pointer;
+                position: relative;
+            }
+            .right {
+                // right: 100px;
+                left: 40px;
+                top: 5px;
+                font-size: 2em;
+            }
+            .left {
+                // left: 100px;
+                right: 40px;
+                top: 5px;
+                font-size: 2em;
             }
             // .slick-arrow {
             //     border: none;

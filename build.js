@@ -4071,10 +4071,9 @@ let data = {
 }
 
 // Services
-new Glide('.glide').mount()
-
+// new Glide('.glide').mount()
 console.log(data["XR Companies"])
-let active = document.querySelector(".glide__slide--active").childNodes[0].innerHTML.split(" ")[0]
+let active = document.querySelector(".active").innerHTML.split(" ")[0]
   console.log(active)
   data[`${active}`].forEach(element => {
   let p = document.createElement("p")
@@ -4083,19 +4082,46 @@ let active = document.querySelector(".glide__slide--active").childNodes[0].inner
 })
 
 let change = () => {
+  let order = ["XR", "Corporations", "Academic"]
   console.log("clicked")
-  let active = document.querySelector(".glide__slide--active").childNodes[0].innerHTML.split(" ")[0]
-  document.querySelector(".options").innerHTML = ""
+  let active = document.querySelector(".active")
+  let not = document.querySelectorAll(".not")
+  let ind = 0
   console.log(active)
-  data[active].forEach(element => {
+  if (active.innerHTML.split(" ")[0] == "XR") {
+    active.classList.remove("active")
+    active.classList.add("not")
+    document.querySelector(".gov").classList.add("active")
+    document.querySelector(".gov").classList.remove("not")
+  }
+  if (active.innerHTML.split(" ")[0] == "Corporations") {
+    active.classList.remove("active")
+    active.classList.add("not")
+    document.querySelector(".aca").classList.add("active")
+    document.querySelector(".aca").classList.remove("not")
+  }
+  if (active.innerHTML.split(" ")[0] == "Academic") {
+    active.classList.remove("active")
+    active.classList.add("not")
+    document.querySelector(".xr").classList.add("active")
+    document.querySelector(".xr").classList.remove("not")
+  }
+  // not[ind].classList.add("active")
+  // not[ind].classList.remove("not")
+
+  document.querySelector(".options").innerHTML = ""
+  console.log(document.querySelector(".active"))
+  data[document.querySelector(".active").innerHTML.split(" ")[0]].forEach(element => {
   let p = document.createElement("p")
   p.innerHTML = element
   document.querySelector(".options").appendChild(p)
 })
 }
-document.querySelector(".glide__arrow").addEventListener("click", () => {
-  setInterval(change, 1000)
-})
+let ins = () => {
+  change()
+}
+document.querySelectorAll(".arrow").forEach(el => el.addEventListener("click", ins))
+  // setInterval(change, 1000)
 
 // Responsive
 
@@ -4176,4 +4202,8 @@ if(screen.width < 576) {
     }
   }
 }
+
+// document.querySelector(".xr-m").addEventListener("click",  () => {
+
+// })
 },{"@glidejs/glide":1,"jump.js":2}]},{},[3]);
