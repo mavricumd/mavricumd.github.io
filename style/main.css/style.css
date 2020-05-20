@@ -453,3 +453,27 @@ body {
       font-family: "Interstate-Light";
       font-size: 1em;
       margin-top: 20px; }
+
+.footer {
+  background: #001738;
+  color: white;
+  padding: 20px;
+  margin-top: 50px; }
+  .footer .foots {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Interstate-Bold";
+    font-family: 1em; }
+    .footer .foots .foot1 a {
+      text-decoration: none;
+      color: #FB4D3D; }
+    .footer .foots .foot1 .address p:nth-child(2n+1) {
+      font-size: 1.2em; }
+    .footer .foots .foot1 .address p:nth-child(2n) {
+      line-height: 30px; }
+    .footer .foots .foot2 .follow p {
+      font-size: 1.2em; }
+    .footer .foots .foot2 .follow .social a {
+      text-decoration: none;
+      color: #F9FAFC;
+      margin-right: 10px; }
