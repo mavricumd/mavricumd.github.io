@@ -20,8 +20,7 @@ html {
 
 body {
   margin: 0;
-  overflow-x: hidden;
-  background: #FCF8EC; }
+  overflow-x: hidden; }
 
 .landing {
   max-width: 100%;
@@ -129,7 +128,6 @@ body {
         margin-left: 10%; }
   .about .list .board {
     width: 100%;
-    background-color: #001738;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -137,7 +135,7 @@ body {
     flex-direction: column;
     overflow: hidden; }
     .about .list .board p {
-      color: white;
+      color: #001738;
       font-family: "Interstate-light";
       font-size: 2rem; }
     .about .list .board .init {
@@ -147,14 +145,15 @@ body {
       margin-bottom: 2%; }
     .about .list .board .head2 {
       margin-top: 50px;
-      font-family: "Gilroy"; }
+      font-family: "Gilroy";
+      font-size: 3em; }
   .about .list .end {
     width: 70%;
     margin: 0 auto;
     margin-top: 5%; }
     .about .list .end p {
       font-family: 'Interstate-light';
-      font-size: 1.5rem;
+      font-size: 1.25em;
       line-height: 35px; }
   .about .list .bot {
     margin-bottom: 30px;
