@@ -1,0 +1,196 @@
+@font-face {
+  font-family: "Interstate-Light";
+  src: url("/assets/fonts/interstate-light-cond-58b64220b1490.otf"); }
+
+@font-face {
+  font-family: "Interstate-bold";
+  src: url("/assets/fonts/interstate-bold-cond-58b64162258ca.otf"); }
+
+@font-face {
+  font-family: "Interstate-black";
+  src: url("/assets/fonts/interstate-black-cond-58b642507872b.otf"); }
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/assets/fonts/Gilroy-ExtraBold.otf"); }
+
+html {
+  height: 100vh;
+  overflow-x: hidden; }
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #FCF8EC; }
+
+.landing {
+  max-width: 100%;
+  background: #F9FAFC; }
+  .landing nav {
+    font-size: 1.1rem;
+    padding-top: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around; }
+    @media (max-width: 576px) {
+      .landing nav {
+        font-size: 1em; } }
+    .landing nav .logo {
+      margin-top: 16px;
+      width: 100px; }
+      @media (max-width: 576px) {
+        .landing nav .logo {
+          display: none; } }
+    .landing nav .links {
+      width: 60%;
+      display: flex;
+      justify-content: space-around;
+      font-family: "Interstate-Bold";
+      cursor: pointer; }
+    .landing nav a {
+      margin-top: 16px;
+      text-decoration: none;
+      color: white;
+      width: 70px;
+      text-align: center;
+      padding-top: 7.5px;
+      border-radius: 4px;
+      font-family: "Interstate-Black"; }
+  .landing .content {
+    width: 100%;
+    height: 95vh;
+    background-position: 0px -270px;
+    background-image: url("/assets/about.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .landing .content p {
+      position: absolute;
+      font-family: "Gilroy";
+      font-size: 4rem;
+      color: #111111;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -30%); }
+      .landing .content p .virt {
+        color: #FB675A; }
+
+.about .story {
+  font-family: "Gilroy";
+  font-size: 4rem;
+  text-align: center;
+  color: #FB675A; }
+
+.about .list {
+  overflow: hidden; }
+  .about .list .head {
+    font-family: "Gilroy";
+    font-size: 2.75rem;
+    color: #FB675A;
+    text-align: center;
+    margin-top: 7%; }
+  .about .list .row {
+    margin-top: 10%;
+    display: flex; }
+    .about .list .row .left {
+      width: 50%; }
+      .about .list .row .left img {
+        width: 60%;
+        border-radius: 10px;
+        margin-left: 15%; }
+    .about .list .row .right {
+      width: 50%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center; }
+      .about .list .row .right p {
+        font-family: "Interstate-light";
+        font-size: 1.25em;
+        width: 65%;
+        margin-left: 10%;
+        line-height: 40px;
+        vertical-align: middle; }
+    .about .list .row .left-n {
+      width: 50%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center; }
+      .about .list .row .left-n p {
+        font-family: "Interstate-light";
+        font-size: 1.25em;
+        width: 65%;
+        margin-left: 15%;
+        line-height: 40px;
+        vertical-align: middle; }
+    .about .list .row .right-n {
+      width: 50%; }
+      .about .list .row .right-n img {
+        width: 60%;
+        border-radius: 10px;
+        margin-left: 10%; }
+  .about .list .board {
+    width: 100%;
+    background-color: #001738;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5%;
+    flex-direction: column;
+    overflow: hidden; }
+    .about .list .board p {
+      color: white;
+      font-family: "Interstate-light";
+      font-size: 2rem; }
+    .about .list .board .init {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-bottom: 2%; }
+    .about .list .board .head2 {
+      margin-top: 50px;
+      font-family: "Gilroy"; }
+  .about .list .end {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 5%; }
+    .about .list .end p {
+      font-family: 'Interstate-light';
+      font-size: 1.5rem;
+      line-height: 35px; }
+  .about .list .bot {
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    margin-top: 5%; }
+    .about .list .bot .button {
+      font-family: "Interstate-bold";
+      background: #FB675A;
+      color: #F9FAFC;
+      padding: 20px 40px;
+      cursor: pointer;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      border-radius: 4px; }
+
+.footer {
+  background: #001738;
+  color: white;
+  padding: 20px;
+  margin-top: 50px; }
+  .footer .foots {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Interstate-Bold";
+    font-family: 1em; }
+    .footer .foots .foot1 a {
+      text-decoration: none;
+      color: #FB4D3D; }
+    .footer .foots .foot1 .address p:nth-child(2n+1) {
+      font-size: 1.2em; }
+    .footer .foots .foot1 .address p:nth-child(2n) {
+      line-height: 30px; }
+    .footer .foots .foot2 .follow p {
+      font-size: 1.2em; }
+    .footer .foots .foot2 .follow .social a {
+      text-decoration: none;
+      color: #F9FAFC;
+      margin-right: 10px; }

@@ -7,6 +7,7 @@
     "@glidejs/glide": "^3.4.1",
     "browserify": "^16.5.0",
     "cacheable-request": "^2.1.4",
+    "concurrently": "^5.2.0",
     "configstore": "^5.0.0",
     "define-property": "^0.2.5",
     "extend-shallow": "^2.0.1",
@@ -36,8 +37,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass --watch style/style.scss -o style/main.css",
+    "about": "node-sass --watch style/about.scss -o style/about.css",
     "build": "browserify script.js -o build.js",
-    "watch": "watchify script.js -o build.js"
+    "watch": "watchify script.js -o build.js",
+    "boom": "concurrently \"npm run watch\" \"npm run sass\" \"npm run about\""
   },
   "repository": {
     "type": "git",
