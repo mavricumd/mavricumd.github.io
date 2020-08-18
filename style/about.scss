@@ -14,6 +14,14 @@
     font-family: "Gilroy";
     src: url("/assets/fonts/Gilroy-ExtraBold.otf");
 }
+@font-face {
+    font-family: "SpaceGrotesk-Bold";
+    src: url("/assets/fonts/SpaceGrotesk-Bold.ttf");
+}
+@font-face {
+    font-family: "SpaceGrotesk-Medium";
+    src: url("/assets/fonts/SpaceGrotesk-Medium.ttf");
+}
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 576px;
 
@@ -24,7 +32,7 @@ $screen-md-min: 768px;
 $screen-lg-min: 992px;
 
 // Large tablets and desktops
-$screen-xl-min: 1200px;
+$screen-xl-min: 1600px;
 
 // Small devices
 @mixin sm {
@@ -66,16 +74,26 @@ body {
 
 .landing { 
     max-width: 100%;
-    background: #F9FAFC;
-    // background-image: url("../assets/back.jpeg");
+    // background: #001738;
+    z-index: -1;
+    #myVideo {
+        position: absolute;
+        z-index: -1;
+        opacity: 1;
+        @include md  {
+            height: 120vh;
+        }
+    }
+    // background-image: url("../assets/lights.jpg");
     nav {
+        // z-index: 5;
         font-size: 1.1rem;
         padding-top: 10px;
         @include sm {
             font-size: 1em;
         }
         .logo {
-            margin-top: 16px;
+            // margin-top: -10px;
             width: 100px;
             @include sm {
                 display: none;
@@ -85,11 +103,13 @@ body {
         width: 100%;
         justify-content: space-around;
         .links {
-            width: 60%;
+            width: 40%;
             display: flex;
             justify-content: space-around;
-            font-family: "Interstate-Bold";
+            font-family: "SpaceGrotesk-Medium";
             cursor: pointer;
+            color: whitesmoke;
+            margin-left: 40%;
         }
         a {
             margin-top: 16px;
@@ -100,26 +120,66 @@ body {
             text-align: center;
             padding-top:7.5px;
             border-radius: 4px;
-            font-family: "Interstate-Black";
+            font-family: "SpaceGrotesk-Medium";
         }
     }
     .content {
+        height: 100vh;
+        .animate__animated.animate__fadeInDown {
+            // --animate-delay: 3s;
+            --animate-duration: 2s;
+          }
         p {
-            position: absolute;
-            font-family: "Gilroy";
+            @include xl {
+                font-size: 5rem;
+            }
+            font-family: "SpaceGrotesk-Medium";
             font-size: 4rem;
-            color: #111111;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -30%);
+            // z-index: 2;
+            color: white;
+            width: 100%;
+            text-align: center;
+            margin-top: 15%;
+            // top: 30%;
+            // left: 50%;
+            // transform: translate(-50%, -30%);
+        }
+        .sub {
+            text-align: center;
+            width: 100%;
+            display: flex;
+            justify-content: center;
             .virt {
+                @include xl {
+                    font-size: 6rem;
+                }
+                position: absolute;
                 color: #FB675A;
+                font-size: 5rem;
+                margin-top: 10px;
+                font-family: "SpaceGrotesk-Bold";
+                top: 50%;
+            }
+            a {
+                color: #001738;
+                font-family: "SpaceGrotesk-Medium";
+                margin-top: 10%;
+                // border: 1px solid;
+                background: white;
+                // border-color: #FB675A ;
+                padding: 13px 20px;
+                border-radius: 4px;;
+                cursor: pointer;
+                i {
+                    position: relative;
+                    top: 5%;
+                    left: 5%;
+                }
             }
         }
         width: 100%;
         height: 95vh;
         background-position: 0px -270px;
-        background-image: url("/assets/about.jpg");
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -130,7 +190,8 @@ body {
         font-family: "Gilroy";
         font-size: 4rem;
         text-align: center;
-        color: #FB675A;
+        color: #00233C;
+        margin: 0;
     }
     .list {
         overflow: hidden;
@@ -142,57 +203,95 @@ body {
             margin-top: 7%;
         }
         .row {
-            margin-top: 10%;
+            margin-top: 5%;
             display: flex;
+            width: 100%;
+            .circle {
+                width: 100%;
+                height: 400px;
+                // border-radius: 100%;
+                // background-color: #001738;
+                // background: url("../assets/blue-snow.png");
+                position: absolute;
+                top: 100%;
+                right: 10%;
+                clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+                        }
+            .intro {
+                text-align: center;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                p {
+                    @include xl {
+                        font-size: 1.75rem;
+                    }
+                    font-family: "Interstate-light";
+                    font-size: 1.5rem;
+                    max-width: 50%;
+                    line-height: 50px;
+                    color: #111111;
+                }
+            }
             .left {
-                width: 50%;
-                // background: #182C49;
-                // padding-left: 15%;
-                // margin-left: 15
-                img {
-                    width: 60%;
-                    border-radius: 10px;
-                    margin-left: 15%;
+                width: 40%;
+                display: flex;
+                justify-content: center;
+                @include xl {
+                    font-size: 5rem;
+                }
+                font-size: 4rem;
+                font-family: "Gilroy";
+                p {
+                    color: #111111;
+                }
+                span {
+                    color: #FB675A;
                 }
             }
             .right {
-                width: 50%;
-                margin: 0 auto;
+                width: 60%;
                 display: flex;
+                justify-content: center;
                 align-items: center;
-                // padding-left: 15%;
                 p {
+                    width: 75%;
+                    @include xl {
+                        font-size: 1.5rem;
+                    }
+                    font-size: 1.25rem;
                     font-family: "Interstate-light";
-                    font-size: 1.25em;
-                    width: 65%;
-                    margin-left: 10%;
-                    line-height: 40px;
-                    vertical-align: middle;
+                    line-height: 50px;
+                    color: #111111;
                 }
             }
             .left-n {
-                width: 50%;
-                margin: 0 auto;
+                width: 75%;
+                text-align: center;
                 display: flex;
+                justify-content: center;
                 align-items: center;
-                // padding-left: 15%;
                 p {
+                    @include xl {
+                        font-size: 1.75rem;
+                    }
                     font-family: "Interstate-light";
-                    font-size: 1.25em;
-                    width: 65%;
-                    margin-left: 15%;
-                    line-height: 40px;
-                    vertical-align: middle;
+                    font-size: 1.35rem;
+                    max-width: 70%;
+                    line-height: 50px;
+                    color: #111111;
                 }
             }
             .right-n {
                 width: 50%;
-                // background: #182C49;
-                img {
-                    width: 60%;
-                    border-radius: 10px;
-                    margin-left: 10%;
-                }
+                display: flex;
+                justify-content: center;
+                margin: 0;
+            }
+            img {
+                position: relative;
+                right: 7%;
+                top: 30%;
             }
         }
         .board {
@@ -246,6 +345,118 @@ body {
                 margin:0 auto;
                 font-size: 1.15rem;
                 border-radius: 4px;
+            }
+        }
+    }
+}
+.testimonials {
+    height: 100vh;
+    position: relative;
+    h1 {
+        font-family: "Interstate-Black";
+        font-size: 50px;
+        padding-top: 2em;
+        margin-left: 7.5%;
+        color: white;
+    }
+    .data {
+        height: 100%;
+        clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
+        background: #001738;
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 25%;
+        right: 0%;
+        @include sm {
+            justify-content: center;
+            width: 100%;
+            height: 600px;
+        }
+        .card {
+            margin-right: 50%;
+            height: 120px;
+            width: 400px;
+            background: #F9FAFC;
+            border-radius: 3px;
+            margin-bottom: 15%;
+            box-shadow: 0px 12px 30px 0px rgba(0,0,0,0.14);
+            @include sm {
+                margin-right: 0;
+                margin: 0 auto;
+                width: 350px;
+                margin-bottom: 20px;
+
+            }
+        }
+        .card:nth-child(2) {
+            margin-right: 120%;
+            z-index: 2;
+            @include sm {
+                z-index: 0;
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .card-3 {
+        height: 120px;
+        width: 400px;
+        background: #F9FAFC;
+        border-radius: 3px;
+        box-shadow: 0px 12px 30px 0px rgba(0,0,0,0.14);
+        position: absolute;
+        top: auto;
+        margin-top: -11%;
+        right: 20%;
+    }
+}
+
+.team {
+    h1 {
+        font-family: "Interstate-Black";
+        font-size: 50px;
+        padding-top: 2em;
+        margin-left: 7.5%;
+    }
+    .pics {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        @include sm {
+            flex-direction: column;
+        }
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            #sam, #lucien, #japs {
+                border-radius: 50%;
+                margin: 0 auto;
+                width: 50%;
+                box-shadow: (10px 13px 11px rgba(229,233,242,1));
+                @include sm {
+                    width: 30%;
+                    margin-top: 20px;
+                }
+            }
+            p {
+                font-family: "Interstate-Bold";
+                font-size: 1.25em;
+                // width: 150px;
+                margin: 0 auto;
+                margin-top: 20px;
+                // margin-right: 20px;
+            }
+            p:nth-child(3n) {
+                font-family: "Interstate-Light";
+                font-size: 1em;
+                // width: 100px;
+                // margin: 0 auto;
+                margin-top: 20px;
             }
         }
     }
